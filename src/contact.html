@@ -1,0 +1,145 @@
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — LOGI</title>
+      <style>
+        /* CSS for the social media logos */
+        .social-media-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+        }
+
+        .social-media-container img {
+            width: 24px;
+            height: auto;
+        }
+
+        /* Other CSS for the footer section (e.g., text, button styling) */
+        .contact-info-section {
+            /* Styles for the contact info box */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            margin-top: 20px;
+        }
+
+        .contact-info-section h3 {
+            margin-top: 0;
+        }
+
+        .browse-products-button {
+            /* Button styling */
+            background-color: #6a4c33;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+      <img src="https://i.ibb.co/My1QkhYF/logilogo2withoutbg.png" alt="LOGI Product Logo" class="h-32 w-auto">
+        <div style="font-weight:800;color:var(--brown-1)"></div>
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="benefits.html">Become Franchise</a>
+        <a class="nav-link" href="products.html">Products</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h2 class="hero-title" style="color:var(--green-1)">Talk to us</h2>
+      <p class="lead" style="max-width:70%;">Questions, sample requests, or bulk orders — we’re here to help.</p>
+    </div>
+  </section>
+
+  <section class="container" style="margin-top:1.2rem; display:flex; gap:1.2rem; flex-wrap:wrap;">
+    <div style="flex:1; min-width:300px;">
+      <div class="form-card">
+     <form id="contactForm">
+          <input class="form-field" type="text" id="name" placeholder="Your name" required>
+          <input class="form-field" type="email" id="email" placeholder="Your email" required>
+          <input class="form-field" type="tel" id="phone" placeholder="Phone (optional)">
+          <textarea class="form-field" id="message" placeholder="How can we help?" rows="6" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <div style="width:360px; min-width:260px;">
+      <div class="card">
+        <h4 class="kicker">Contact Info</h4>
+        <p class="lead">Email: <a href="mailto:support@logi.company">support@logi.company</a></p>
+        <p class="lead">Phone: <a href="tel:+919985309102">+91 9985309102</a></p>
+         <div class="social-media-container">
+    <a href="https://wa.me/your_phone_number" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+    <a href="https://www.instagram.com/your_username" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/your_page_name" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+    </a>
+    <a href="https://www.youtube.com/your_channel" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="28">
+        </a>
+
+  </div>
+
+        <hr style="margin:1rem 0">
+
+        <h4 class="kicker">Business Hours</h4>
+        <p class="lead">Mon–Fri 9:00am – 6:00pm IST</p>
+
+        <div style="margin-top:1rem;">
+          <a href="products.html" class="btn-primary">Browse Products</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 LOGI — All rights reserved.</div>
+  </footer>
+
+  <script>
+document.querySelector('form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData(this);
+
+  fetch('contact.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    alert(data); // Shows success or error message from PHP
+    this.reset(); // Optionally reset the form
+  })
+  .catch(error => {
+    alert('There was an error sending your message.');
+  });
+});
+</script>
+
+</body>
+</html>
