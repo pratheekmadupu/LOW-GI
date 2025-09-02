@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products — LOGI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Product card styling */
+    .product-card {
+      background-color: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      min-height: 500px; 
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Fix container height so headings align */
+    .product-card .image-container {
+      width: 100%;
+      height: 300px; /* fixed equal height */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .product-card .image-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0.5rem;
+    }
+
+    /* Content below image */
+    .product-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-info h4 {
+      margin: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #333;
+      min-height: 3rem; /* ensures all headings align */
+      display: flex;
+      align-items: center;
+    }
+
+    .product-info p {
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .product-footer {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: auto;
+    }
+
+    .buy-btn {
+      background-color: #8B4513;
+      color: #fff;
+      font-weight: bold;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="https://i.ibb.co/My1QkhYF/logilogo2withoutbg.png" alt="LOGI Product Logo" class="h-32 w-auto">
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="benefits.html">Become Franchise</a>
+        <a class="nav-link" href="products.html">Products</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="container">
+      <h2 class="hero-title" style="color:var(--brown-1)">Our Products</h2>
+      <p class="lead" style="max-width:70%;">Explore LOGI's product range — designed for different needs and life stages.</p>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="container" style="margin-top:1.4rem">
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1rem;">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="image-container">
+          <iframe src="https://www.pacdora.com/share?filter_url=psw299irgs"></iframe>
+        </div>
+        <div class="product-info">
+          <h4>Multi Millet Flour</h4>
+          <p>
+            LOGI Nutritional Multi Millet Flour is a premium blend of Ragi, Bajra, Jowar, Foxtail, and Almonds—carefully selected for their exceptional health benefits and superior taste. At LOGI, we are committed to maintaining the highest quality standards, sourcing each ingredient directly from certified organic farms where crops are cultivated naturally without harmful chemicals or pesticides. This ensures that every batch retains its purity, natural flavor, and nutritional richness. The combination of these ancient grains and almonds makes this flour a true superfood—naturally rich in fiber, protein, calcium, iron, and essential micronutrients. With its low glycemic index, it helps regulate blood sugar levels, making it a smart choice for diabetes management. The high dietary fiber aids in controlling appetite, supporting weight management and preventing obesity. Packed with antioxidants, vitamins, and minerals, it strengthens immunity, while its protein and amino acids contribute to muscle strength and overall vitality. LOGI Multi Millet Flour is also incredibly versatile—perfect for making soft rotis, chapatis, and phulkas, traditional South Indian dishes like idly and dosa, or even popular snacks such as dhokla. Every serving offers a delightful balance of taste and health, making it an ideal daily staple for the whole family.
+          </p>
+          <div class="product-footer">
+            <div style="font-weight: 800; font-size: 1.5rem;">₹150</div>
+            <a href="#" class="buy-btn">BUY</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="image-container">
+          <iframe src="https://www.pacdora.com/share?filter_url=psurkr5uig"></iframe>
+        </div>
+        <div class="product-info">
+          <h4>Ragi Millet Flour</h4>
+          <p>
+            LOGI’s Nutritional Ragi Flour is a wholesome blend of Ragi, Rice Bran, and Almonds, crafted with utmost care to ensure both health and taste for our customers. Ragi, known as a powerhouse of calcium, iron, and dietary fiber, supports strong bones, improves digestion, and helps manage blood sugar levels. Rice Bran adds natural antioxidants, Vitamin E, and heart-friendly nutrients that promote cholesterol management and overall wellness. Almonds enrich the flour with healthy fats, protein, and essential vitamins that enhance energy and brain health. This unique combination not only makes it diabetic-friendly and nutrient-dense but also versatile in Indian kitchens. LOGI’s Nutritional Ragi Flour can be used to prepare Chapati, Phulka, Roti, and Ragi Mudda, as well as traditional breakfast items like Idli and Dosa, and even popular Indian snacks such as Dhokla and more, making every meal both healthy and delicious.
+          </p>
+          <div class="product-footer">
+            <div style="font-weight: 800; font-size: 1.5rem;">₹120</div>
+            <a href="#" class="buy-btn">BUY</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="image-container">
+          <iframe src="https://www.pacdora.com/share?filter_url=psgty4vil1"></iframe>
+        </div>
+        <div class="product-info">
+          <h4>Low-GI Rice</h4>
+          <p>
+           LOGI – Low GI for Smart Living is more than just a slogan; it reflects our commitment to building a healthier future. LOGI brings scientifically validated Low Glycemic Index rice that helps control diabetes, manage obesity, and improve heart health, making it a smart food choice for today’s lifestyle challenges. We work hand-in-hand with farmers, guiding them toward organic and sustainable cultivation practices, ensuring that every grain retains its natural purity and nutrition. By offering rice rich in Gamma Oryzanol and other essential nutrients, LOGI empowers families to adopt a balanced diet without giving up on taste. In every step, from farm to table, LOGI stands true to its promise—delivering Low GI for Smart Living, where health, quality, and care come together for the well-being of all generations.
+          </p>
+          <div class="product-footer">
+            <div style="font-weight: 800; font-size: 1.5rem;">₹180</div>
+            <a href="#" class="buy-btn">BUY</a>
+          </div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="image-container">
+          <iframe src="https://www.pacdora.com/share?filter_url=psurkr5uig"></iframe>
+        </div>
+        <div class="product-info">
+          <h4>Ragi Malt Powder</h4>
+          <p>
+            LOGI’s Nutritional Ragi Flour is a wholesome blend of Ragi, Rice Bran, and Almonds, crafted with utmost care to ensure both health and taste for our customers. Ragi, known as a powerhouse of calcium, iron, and dietary fiber, supports strong bones, improves digestion, and helps manage blood sugar levels. Rice Bran adds natural antioxidants, Vitamin E, and heart-friendly nutrients that promote cholesterol management and overall wellness. Almonds enrich the flour with healthy fats, protein, and essential vitamins that enhance energy and brain health. This unique combination not only makes it diabetic-friendly and nutrient-dense but also versatile in Indian kitchens. LOGI’s Nutritional Ragi Flour can be used to prepare Chapati, Phulka, Roti, and Ragi Mudda, as well as traditional breakfast items like Idli and Dosa, and even popular Indian snacks such as Dhokla and more, making every meal both healthy and delicious.
+          </p>
+          <div class="product-footer">
+            <div style="font-weight: 800; font-size: 1.5rem;">₹120</div>
+            <a href="#" class="buy-btn">BUY</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">© 2025 LOGI — All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
