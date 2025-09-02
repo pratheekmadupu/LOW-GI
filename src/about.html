@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — LOGI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="https://i.ibb.co/My1QkhYF/logilogo2withoutbg.png" alt="LOGI Product Logo" class="h-32 w-auto">
+        <div style="font-weight:800;color:var(--brown-1)"></div>
+      </a>
+      <nav class="hidden md:flex gap-6">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="benefits.html">Become Franchise</a>
+        <a class="nav-link" href="products.html">Products</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero: full-bleed video -->
+  <section class="hero-large" style="position:relative; width:100%; height:100vh; overflow:hidden;">
+    <video class="hero-video" autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover;">
+      <source src="hero.mp4" type="video/mp4">
+      <!-- fallback GIF -->
+      <img src="https://i.ibb.co/pgvGq97/Rhino-Eats-Rice-Shows-Tasty-unscreen.gif" alt="LOGI hero" style="width:100%;height:100%;object-fit:cover;">
+    </video>
+    <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; color:white;">
+      <h1 style="font-size:3rem; font-weight:bold; margin-bottom:1rem;">About LOGI</h1>
+      <p style="font-size:1.25rem; max-width:700px; margin:0 auto 2rem;">Learn more about our mission and values for healthy living.</p>
+      <a href="#content" style="display:inline-block; background-color:#8B4513; padding:1rem 2rem; border-radius:50px; font-size:1.25rem; font-weight:600; color:white; text-decoration:none;">
+        Read More
+      </a>
+    </div>
+  </section>
+
+  <!-- Page hero — large and consistent with Home -->
+  <section id="content" class="page-hero">
+    <div class="container" style="display:flex; gap:2rem; align-items:center;">
+      <div style="flex:1">
+        <span class="hero-eyebrow" style="background:rgba(34,139,34,0.08); color:var(--green-1)">Our Story</span>
+        <h2 class="hero-title" style="color:var(--brown-1); white-space:nowrap;">
+  Crafting Better Nutrition — Thoughtfully
+</h2>
+
+        <p class="lead" style="max-width:70%;">LOGI began with a simple belief: whole, well-balanced nutrition should be accessible to everyone. We source responsibly, formulate with science and taste in mind, and test every batch for quality.</p>
+        <div style="margin-top:1rem;">
+          <a href="products.html" class="btn-primary">Our Products</a>
+        </div>
+      </div>
+      <div style="width:420px;">      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div style="display:flex; gap:2rem; flex-wrap:wrap;">
+      <div style="flex:1; min-width:320px">
+        <h3 class="kicker">Quality & Sourcing</h3>
+        <p class="lead">We partner with trusted farmers and suppliers, prioritize traceability and use minimal processing to retain nutrients.</p>
+      </div>
+      <div style="flex:1; min-width:320px">
+        <h3 class="kicker">Science-first Formulation</h3>
+        <p class="lead">Formulated with nutritionists and backed by laboratory quality checks, our blends are balanced for daily consumption.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:1.5rem;">
+      <h3 class="kicker">Sustainability</h3>
+      <p class="lead">Packaging is designed to reduce waste; we’re constantly improving our supply chain to lower carbon footprint.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">© 2025 LOGI — All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
