@@ -1,2 +1,2 @@
-# eshophome-2
+# LOW-GI
 eshophome
