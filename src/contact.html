@@ -73,13 +73,36 @@
   <section class="container" style="margin-top:1.2rem; display:flex; gap:1.2rem; flex-wrap:wrap;">
     <div style="flex:1; min-width:300px;">
       <div class="form-card">
-     <form id="contactForm">
-          <input class="form-field" type="text" id="name" placeholder="Your name" required>
-          <input class="form-field" type="email" id="email" placeholder="Your email" required>
-          <input class="form-field" type="tel" id="phone" placeholder="Phone (optional)">
-          <textarea class="form-field" id="message" placeholder="How can we help?" rows="6" required></textarea>
-          <button type="submit" class="btn-primary">Send Message</button>
-        </form>
+     <section id="contact" class="contact">
+    <h3>Contact Us</h3>
+  <form id="whatsapp-form">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit">Send on WhatsApp</button>
+</form>
+
+<script>
+  document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const whatsappNumber = '919985309102'; // 👈 Replace with your full WhatsApp number including country code (no + or spaces)
+    const text = `Hello! 👋 I'm ${name}.\nEmail: ${email}\nMessage: ${message}`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+
+    window.open(url, '_blank'); // Opens WhatsApp chat
+  });
+</script>
       </div>
     </div>
 
@@ -143,3 +166,4 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
 </body>
 </html>
+
