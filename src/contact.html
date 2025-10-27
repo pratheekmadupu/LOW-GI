@@ -4,63 +4,194 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — LOGI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* CSS for the social media logos */
-    .social-media-container {
-        display: flex;
-        gap: 10px;
-        margin-top: 8px;
-        margin-bottom: 15px;
+    /* Root color palette inspired by LOGI branding */
+    :root {
+      --brown-1: #6a4c33;
+      --brown-2: #8b5e3c;
+      --green-1: #3c5d3f;
+      --beige: #f9f9f9;
+      --text-dark: #2b2b2b;
+      --text-light: #666;
     }
-    .social-media-container img {
-        width: 24px;
-        height: auto;
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffdfb;
+      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
     }
-    .contact-info-section {
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background-color: #f9f9f9;
-        margin-top: 20px;
+
+    /* Header */
+    .header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      padding: 0.8rem 1rem;
     }
-    .contact-info-section h3 {
-        margin-top: 0;
+
+    .nav-link {
+      color: var(--text-dark);
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
     }
-    .browse-products-button {
-        background-color: #6a4c33;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 20px;
-        cursor: pointer;
+    .nav-link:hover {
+      color: var(--green-1);
+    }
+
+    /* Hero Section */
+    .page-hero {
+      background: linear-gradient(120deg, var(--beige), #f3ece6);
+      padding: 3rem 1rem;
+      text-align: center;
+      border-bottom: 2px solid #f0eae4;
+      animation: fadeIn 1.5s ease;
+    }
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--green-1);
+    }
+    .lead {
+      color: var(--text-light);
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    /* Contact Section */
+    .form-card {
+      background-color: var(--beige);
+      border: 1px solid #ddd;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      animation: slideUp 1s ease;
     }
     form label {
       display: block;
-      margin-top: 10px;
+      margin-bottom: 6px;
       font-weight: 600;
+      color: var(--brown-1);
     }
     form input, form textarea {
       width: 100%;
-      padding: 8px;
-      margin-top: 4px;
+      padding: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+    form input:focus, form textarea:focus {
+      border-color: var(--green-1);
     }
     form button {
-      margin-top: 15px;
-      background-color: #25d366;
+      background-color: var(--green-1);
       color: white;
       border: none;
-      padding: 10px 18px;
+      padding: 12px 20px;
       border-radius: 25px;
       cursor: pointer;
       font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      width: 100%;
     }
     form button:hover {
-      background-color: #1ebe5d;
+      background-color: var(--brown-1);
+      transform: scale(1.03);
+    }
+
+    /* Contact Info */
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border: 1px solid #eee;
+      animation: slideUp 1.2s ease;
+    }
+    .kicker {
+      font-size: 1.1rem;
+      color: var(--brown-1);
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+    a {
+      color: var(--green-1);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: var(--brown-1);
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: var(--green-1);
+    }
+
+    /* Social Icons */
+    .social-media-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+    }
+    .social-media-container img {
+      width: 30px;
+      transition: transform 0.3s;
+    }
+    .social-media-container img:hover {
+      transform: scale(1.2);
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--brown-1);
+      color: white;
+      text-align: center;
+      padding: 1.2rem 0;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .page-hero {
+        padding: 2rem 1rem;
+      }
+      .hero-title {
+        font-size: 1.8rem;
+      }
+      .container {
+        flex-direction: column;
+      }
     }
   </style>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
@@ -82,15 +213,14 @@
 
   <section class="page-hero">
     <div class="container">
-      <h2 class="hero-title" style="color:var(--green-1)">Talk to us</h2>
-      <p class="lead" style="max-width:70%;">Questions, sample requests, or bulk orders — we’re here to help.</p>
+      <h2 class="hero-title">Talk to us</h2>
+      <p class="lead" style="max-width:70%; margin:auto;">Questions, sample requests, or bulk orders — we’re here to help.</p>
     </div>
   </section>
 
-  <section class="container" style="margin-top:1.2rem; display:flex; gap:1.2rem; flex-wrap:wrap;">
-    <div style="flex:1; min-width:300px;">
+  <section class="container" style="margin-top:1.2rem; display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:center;">
+    <div style="flex:1; min-width:300px; max-width:500px;">
       <div class="form-card">
-        <!-- ✅ WhatsApp Form -->
         <form id="whatsapp-form">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
@@ -103,22 +233,6 @@
 
           <button type="submit">Send on WhatsApp</button>
         </form>
-
-        <script>
-          document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            const whatsappNumber = '919985309102'; // 🔹 Replace with your full WhatsApp number (no + or spaces)
-            const text = `Hello! 👋 I'm ${name}.\nEmail: ${email}\nMessage: ${message}`;
-            const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
-
-            window.open(url, '_blank'); // Opens WhatsApp chat
-          });
-        </script>
       </div>
     </div>
 
@@ -159,5 +273,17 @@
     <div class="container">© 2025 LOGI — All rights reserved.</div>
   </footer>
 
+  <script>
+    document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      const whatsappNumber = '919985309102';
+      const text = `Hello! 👋 I'm ${name}.\nEmail: ${email}\nMessage: ${message}`;
+      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    });
+  </script>
 </body>
 </html>
