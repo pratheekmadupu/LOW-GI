@@ -1,57 +1,74 @@
- <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — LOGI</title>
-      <style>
-        /* CSS for the social media logos */
-        .social-media-container {
-            display: flex;
-            gap: 10px;
-            margin-top: 8px;
-            margin-bottom: 15px;
-        }
-
-        .social-media-container img {
-            width: 24px;
-            height: auto;
-        }
-
-        /* Other CSS for the footer section (e.g., text, button styling) */
-        .contact-info-section {
-            /* Styles for the contact info box */
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            margin-top: 20px;
-        }
-
-        .contact-info-section h3 {
-            margin-top: 0;
-        }
-
-        .browse-products-button {
-            /* Button styling */
-            background-color: #6a4c33;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-    </style>
+  <style>
+    /* CSS for the social media logos */
+    .social-media-container {
+        display: flex;
+        gap: 10px;
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+    .social-media-container img {
+        width: 24px;
+        height: auto;
+    }
+    .contact-info-section {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        margin-top: 20px;
+    }
+    .contact-info-section h3 {
+        margin-top: 0;
+    }
+    .browse-products-button {
+        background-color: #6a4c33;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    form button {
+      margin-top: 15px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    form button:hover {
+      background-color: #1ebe5d;
+    }
+  </style>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <header class="header">
     <div class="container flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
-      <img src="https://i.ibb.co/My1QkhYF/logilogo2withoutbg.png" alt="LOGI Product Logo" class="h-32 w-auto">
-        <div style="font-weight:800;color:var(--brown-1)"></div>
+        <img src="https://i.ibb.co/My1QkhYF/logilogo2withoutbg.png" alt="LOGI Product Logo" class="h-32 w-auto">
       </a>
       <nav class="hidden md:flex gap-6">
         <a class="nav-link" href="index.html">Home</a>
@@ -73,33 +90,35 @@
   <section class="container" style="margin-top:1.2rem; display:flex; gap:1.2rem; flex-wrap:wrap;">
     <div style="flex:1; min-width:300px;">
       <div class="form-card">
-  <label for="name">Name</label>
-  <input type="text" id="name" name="name" required>
+        <!-- ✅ WhatsApp Form -->
+        <form id="whatsapp-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
 
-  <label for="message">Message</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-  <button type="submit">Send on WhatsApp</button>
-</form>
+          <button type="submit">Send on WhatsApp</button>
+        </form>
 
-<script>
-  document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+        <script>
+          document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
 
-    const whatsappNumber = '919985309102'; // 👈 Replace with your full WhatsApp number including country code (no + or spaces)
-    const text = `Hello! 👋 I'm ${name}.\nEmail: ${email}\nMessage: ${message}`;
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+            const whatsappNumber = '919985309102'; // 🔹 Replace with your full WhatsApp number (no + or spaces)
+            const text = `Hello! 👋 I'm ${name}.\nEmail: ${email}\nMessage: ${message}`;
+            const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 
-    window.open(url, '_blank'); // Opens WhatsApp chat
-  });
-</script>
+            window.open(url, '_blank'); // Opens WhatsApp chat
+          });
+        </script>
       </div>
     </div>
 
@@ -108,21 +127,21 @@
         <h4 class="kicker">Contact Info</h4>
         <p class="lead">Email: <a href="mailto:support@logi.company">support@logi.company</a></p>
         <p class="lead">Phone: <a href="tel:+919985309102">+91 9985309102</a></p>
-         <div class="social-media-container">
-    <a href="https://wa.me/your_phone_number" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </a>
-    <a href="https://www.instagram.com/your_username" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-    </a>
-    <a href="https://www.facebook.com/your_page_name" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-    </a>
-    <a href="https://www.youtube.com/your_channel" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="28">
-        </a>
 
-  </div>
+        <div class="social-media-container">
+          <a href="https://wa.me/919985309102" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+          </a>
+          <a href="https://www.instagram.com/your_username" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+          </a>
+          <a href="https://www.facebook.com/your_page_name" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+          </a>
+          <a href="https://www.youtube.com/your_channel" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube" width="28">
+          </a>
+        </div>
 
         <hr style="margin:1rem 0">
 
@@ -140,27 +159,5 @@
     <div class="container">© 2025 LOGI — All rights reserved.</div>
   </footer>
 
-  <script>
-document.querySelector('form').addEventListener('submit', function(e) {
-  e.preventDefault();
-
-  const formData = new FormData(this);
-
-  fetch('contact.php', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => response.text())
-  .then(data => {
-    alert(data); // Shows success or error message from PHP
-    this.reset(); // Optionally reset the form
-  })
-  .catch(error => {
-    alert('There was an error sending your message.');
-  });
-});
-</script>
-
 </body>
 </html>
-
